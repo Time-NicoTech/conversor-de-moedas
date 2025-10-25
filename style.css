@@ -4,5 +4,21 @@
     box-sizing: border-box;
 }
 body{
-    background-color: azure;
+    background-color: rgb(41, 41, 41);
+    
+}
+section{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+.container{
+    background-color: whitesmoke;
+    height: 400px;
+    width: 400px;
+    display: inherit;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
 }
