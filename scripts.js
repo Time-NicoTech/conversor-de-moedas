@@ -37,7 +37,7 @@ document.querySelector(".converter-btn").addEventListener("click", ()=>{
 
     const btnAtivo = document.querySelector(".btn.active");
     
-    const resultado = formatarValor(parseFloat(input.value) * parseFloat(btnAtivoValor.dataset.valor), btnAtivo.name);
+    const resultado = formatarValor(parseFloat(input.value) * parseFloat(btnAtivo.dataset.valor), btnAtivo.name);
     
     const display = document.querySelector(".display-valor");
     display.textContent = resultado;
