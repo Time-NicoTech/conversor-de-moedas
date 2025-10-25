@@ -20,20 +20,28 @@ function formatarValor(valor, moeda){
     })
 }
 
+document.querySelectorAll(".btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
+        const btns = document.querySelectorAll(".btn");
+
+        btns.forEach(btn=>{
+            btn.classList.remove("active");
+        })
+
+        e.currentTarget.classList.add("active");
+    })
+})
+
 document.querySelector(".converter-btn").addEventListener("click", ()=>{
-    const valorInput = document.querySelector(".input-valor").value;
+    const input = document.querySelector(".input-valor");
 
     const btnAtivo = document.querySelector(".btn.active");
     
-    const resultado = formatarValor(parseFloat(valorInput) * parseFloat(btnAtivoValor.dataset.valor), btnAtivo.name);
-
-   
+    const resultado = formatarValor(parseFloat(input.value) * parseFloat(btnAtivoValor.dataset.valor), btnAtivo.name);
     
     const display = document.querySelector(".display-valor");
     display.textContent = resultado;
 
-})
+    input.value = "";
 
-const calcularValor = (valor)=>{
-    
-}
+})
