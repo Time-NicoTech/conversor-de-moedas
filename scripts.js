@@ -34,14 +34,20 @@ document.querySelectorAll(".btn").forEach(btn=>{
 
 document.querySelector(".converter-btn").addEventListener("click", ()=>{
     const input = document.querySelector(".input-valor");
-
-    const btnAtivo = document.querySelector(".btn.active");
-    
-    const resultado = formatarValor(parseFloat(input.value) * parseFloat(btnAtivo.dataset.valor), btnAtivo.name);
-    
     const display = document.querySelector(".display-valor");
-    display.textContent = resultado;
 
-    input.value = "";
-
+    if(!(input.value.trim() === "")){
+        const btnAtivo = document.querySelector(".btn.active");
+        let resultado;
+        try{
+            resultado = formatarValor(parseFloat(input.value) * parseFloat(btnAtivo.dataset.valor), btnAtivo.name);
+            display.textContent = resultado;
+        }
+        catch (erro){
+            display.textContent = "Valor inválido";
+        }
+        input.value = "";
+    }else{
+        display.textContent = "Digite alguma coisa";
+    }
 })
