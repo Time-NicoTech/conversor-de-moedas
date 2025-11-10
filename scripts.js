@@ -51,7 +51,7 @@ document.querySelector(".converter-btn").addEventListener("click", ()=>{
         display.textContent = "Digite alguma coisa";
     }
 })
-
+// Isaac fez essa função
 function trocarCor(btn){
     document.querySelector("body").style.background = "green";
 }
