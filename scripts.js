@@ -61,7 +61,7 @@ document.querySelector("#btnCor").addEventListener("click", (e)=>{
 });
 
 
-//
+//Luquinhas moral fez essa função
 function trocadordeCor(btn){
     document.querySelector("body").style.background = "blue";
 }
