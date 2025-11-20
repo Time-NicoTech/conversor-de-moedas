@@ -59,3 +59,13 @@ function trocarCor(btn){
 document.querySelector("#btnCor").addEventListener("click", (e)=>{
     trocarCor(e.currentTarget);
 });
+
+
+//
+function trocadordeCor(btn){
+    document.querySelector("body").style.background = "blue";
+}
+
+document.querySelector("#btnCor").addEventListener("click", (e)=>{
+    trocadordeCor(e.currentTarget);
+});
